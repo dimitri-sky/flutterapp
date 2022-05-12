@@ -22,7 +22,7 @@ class NavigationService {
     );
   }
 
-  void GoBack() {
+  void goBack() {
     navigatorKey.currentState?.pop();
   }
 }
