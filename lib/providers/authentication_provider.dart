@@ -16,5 +16,31 @@ class AuthenticationProvider extends ChangeNotifier {
     _auth = FirebaseAuth.instance;
     _navigationService = GetIt.instance.get<NavigationService>();
     _databaseService = GetIt.instance.get<DatabaseService>();
+
+    _auth.authStateChanges().listen((_user) {
+      if (_user != null) {
+        print("Logged in");
+      } else {
+        print("Not Authenticated");
+      }
+    });
   }
+
+  Future<void> loginUsingEmailAndPassword(
+      String _email, String _password) async {
+    try {
+      await _auth.signInWithEmailAndPassword(
+        email: _email,
+        password: _password,
+      );
+      print(_auth.currentUser);
+      // There was some weird code here like: _navigationService.navigateTo('/home');
+    } on FirebaseAuthException {
+      print("Error logging user into Firebase");
+    } catch (error) {
+      print(error);
+    }
+  }
+
+  void signOut() {}
 }
