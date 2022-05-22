@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-
 // Packages
+import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutterapp/providers/authentication_provider.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +13,8 @@ import './providers/authentication_provider.dart';
 // Pages
 import './pages/splash_page.dart';
 import './pages/login_page.dart';
+import './pages/register_page.dart';
+import './pages/home_page.dart';
 
 void main() {
   runApp(
@@ -52,6 +53,8 @@ class MainApp extends StatelessWidget {
         initialRoute: '/login',
         routes: {
           '/login': (BuildContext _context) => LoginPage(),
+          '/register': (BuildContext _context) => RegisterPage(),
+          '/home': (BuildContext _context) => HomePage(),
         },
       ),
     );
