@@ -61,5 +61,28 @@ class AuthenticationProvider extends ChangeNotifier {
     }
   }
 
-  void signOut() {}
+  Future<String?> registerUserUsingEmailAndPassword(
+      String _email, String _password) async {
+    try {
+      UserCredential _credentials = await _auth.createUserWithEmailAndPassword(
+        email: _email,
+        password: _password,
+      );
+      return _credentials.user!.uid;
+    } on FirebaseAuthException {
+      print("Error registering user.");
+    } catch (error) {
+      print(error);
+    }
+  }
+
+  Future<void> logout() async {
+    try {
+      await _auth.signOut();
+    } on FirebaseAuthException {
+      print("Error logging out.");
+    } catch (error) {
+      print(error);
+    }
+  }
 }

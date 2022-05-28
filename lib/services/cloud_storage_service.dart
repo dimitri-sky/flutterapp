@@ -10,4 +10,6 @@ class CloudStorageService {
   final FirebaseStorage _storage = FirebaseStorage.instance;
 
   CloudStorageService() {}
+
+  // Future<String?> saveUserImageToStorage
 }
