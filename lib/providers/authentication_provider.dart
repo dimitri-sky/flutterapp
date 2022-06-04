@@ -21,7 +21,7 @@ class AuthenticationProvider extends ChangeNotifier {
     _auth = FirebaseAuth.instance;
     _navigationService = GetIt.instance.get<NavigationService>();
     _databaseService = GetIt.instance.get<DatabaseService>();
-    _auth.signOut();
+    //_auth.signOut();
     _auth.authStateChanges().listen((_user) {
       if (_user != null) {
         _databaseService.getUser(_user.uid).then(
@@ -36,7 +36,7 @@ class AuthenticationProvider extends ChangeNotifier {
                 //'image': _userData['image'],
               },
             );
-            _navigationService.removeAndNavigateToRoute('/home');
+            _navigationService.removeAndNavigateToRoute('/chat');
           },
         );
       } else {

@@ -14,7 +14,7 @@ import './providers/authentication_provider.dart';
 import './pages/splash_page.dart';
 import './pages/login_page.dart';
 import './pages/register_page.dart';
-import './pages/home_page.dart';
+import './pages/chat_page.dart';
 
 void main() {
   runApp(
@@ -54,7 +54,7 @@ class MainApp extends StatelessWidget {
         routes: {
           '/login': (BuildContext _context) => LoginPage(),
           '/register': (BuildContext _context) => RegisterPage(),
-          '/home': (BuildContext _context) => HomePage(),
+          '/chat': (BuildContext _context) => ChatPage(),
         },
       ),
     );
