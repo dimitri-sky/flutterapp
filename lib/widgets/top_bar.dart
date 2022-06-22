@@ -58,7 +58,7 @@ class TopBar extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Wondering how do you have such a fat...",
+                      "Wondering how has your day been",
                       style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w600,

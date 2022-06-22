@@ -13,6 +13,9 @@ import '../providers/authentication_provider.dart';
 // Services
 import '../services/navigation_service.dart';
 
+// Pages
+import '../pages/chat_page.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

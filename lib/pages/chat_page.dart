@@ -1,5 +1,6 @@
 // Packages
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 // Widgets
@@ -8,14 +9,14 @@ import '../widgets/top_bar.dart';
 import '../widgets/custom_input_fields.dart';
 
 // Models
-//import '../models/chat.dart';
-//import '../models/chat_message.dart';
+import '../models/chat.dart';
+import '../models/chat_message.dart';
 
 // Providers
 import '../providers/authentication_provider.dart';
 
 // Services
-// import '../services/navigation_service.dart';
+import '../services/navigation_service.dart';
 
 class ChatPage extends StatefulWidget {
   //final Chat chat;
@@ -35,7 +36,7 @@ class _ChatPageState extends State<ChatPage> {
   late double _deviceWidth;
 
   late AuthenticationProvider _auth;
-  // late NavigationService _navigation;
+  late NavigationService _navigation;
   late GlobalKey<FormState> _messageFormState;
   late ScrollController _messagesListViewController;
 
@@ -44,6 +45,7 @@ class _ChatPageState extends State<ChatPage> {
     _deviceHeight = MediaQuery.of(context).size.height;
     _deviceWidth = MediaQuery.of(context).size.width;
     _auth = Provider.of<AuthenticationProvider>(context);
+    _navigation = GetIt.instance.get<NavigationService>();
     return _buildUI();
   }
 
