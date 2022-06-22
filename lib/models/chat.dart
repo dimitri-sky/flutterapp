@@ -4,9 +4,7 @@ import '../models/chat_message.dart';
 class Chat {
   final String uid;
   final String currentUserUid;
-  final bool activity;
-  final bool group;
-  final List<ChatUser> members;
+  //final List<ChatUser> members;
   List<ChatMessage> messages;
 
   late final List<ChatUser> _recepients;
@@ -14,23 +12,22 @@ class Chat {
   Chat({
     required this.uid,
     required this.currentUserUid,
-    required this.members,
+    //required this.members,
     required this.messages,
-    required this.activity,
-    required this.group,
   }) {
-    _recepients = members.where((_i) => _i.uid != currentUserUid).toList();
+    _recepients = currentUserUid as List<ChatUser>; // Why "as List<ChatUser>"
+    //_recepients = members.where((_i) => _i.uid != currentUserUid.toList();
   }
 
   List<ChatUser> recepients() {
     return _recepients;
   }
 
-  String title() {
-    return !group
-        ? _recepients.first.name
-        : _recepients.map((_i) => _i.name).join(', ');
-  }
+// String title() {
+//   return !group
+//       ? _recepients.first.name
+//       : _recepients.map((_i) => _i.name).join(', ');
+// }
 
 //     String imageURL {
 //     return !group

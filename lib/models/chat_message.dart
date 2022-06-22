@@ -19,7 +19,7 @@ class ChatMessage {
     required this.sentTime,
   });
 
-  factory ChatMessage.fromJson(Map<String, dynamic> _json) {
+  factory ChatMessage.fromJSON(Map<String, dynamic> _json) {
     MessageType _messageType;
     switch (_json['type']) {
       case 'text':

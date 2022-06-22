@@ -9,6 +9,7 @@ import './services/navigation_service.dart';
 
 // Providers
 import './providers/authentication_provider.dart';
+import './providers/chat_page_provider.dart';
 
 // Pages
 import './pages/splash_page.dart';
@@ -54,7 +55,9 @@ class MainApp extends StatelessWidget {
         routes: {
           '/login': (BuildContext _context) => LoginPage(),
           '/register': (BuildContext _context) => RegisterPage(),
-          '/chat': (BuildContext _context) => ChatPage(),
+          '/chat': (BuildContext _context) => ChatPage(
+                chat: _chat,
+              ), // should be ChatPage(chat: _chat)
         },
       ),
     );

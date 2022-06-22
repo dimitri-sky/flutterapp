@@ -19,11 +19,11 @@ import '../providers/authentication_provider.dart';
 import '../services/navigation_service.dart';
 
 class ChatPage extends StatefulWidget {
-  //final Chat chat;
+  final Chat chat;
 
-  //ChatPage({
-  //@required this.chat,
-  //});
+  ChatPage({
+    required this.chat,
+  });
 
   @override
   State<StatefulWidget> createState() {

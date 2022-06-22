@@ -28,7 +28,7 @@ class AuthenticationProvider extends ChangeNotifier {
           (_snapshot) {
             Map<String, dynamic> _userData =
                 _snapshot.data()! as Map<String, dynamic>;
-            user = ChatUser.fromJson(
+            user = ChatUser.fromJSON(
               {
                 'uid': _user.uid,
                 'name': _userData['name'],
@@ -36,6 +36,7 @@ class AuthenticationProvider extends ChangeNotifier {
                 //'image': _userData['image'],
               },
             );
+            // Get get _chat => null;
             _navigationService.removeAndNavigateToRoute('/chat');
           },
         );
