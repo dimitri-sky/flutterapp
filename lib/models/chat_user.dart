@@ -13,7 +13,7 @@ class ChatUser {
     // required this.lastActive,
   });
 
-  factory ChatUser.fromJson(Map<String, dynamic> _json) {
+  factory ChatUser.fromJSON(Map<String, dynamic> _json) {
     return ChatUser(
       uid: _json['uid'],
       name: _json['name'],
