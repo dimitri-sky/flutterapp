@@ -1,6 +1,6 @@
 # flutterapp
 
-![alt text][(https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)](https://github.com/dimitri-sky/flutterapp/blob/main/assets/images/logo.png)
+![alt text](https://github.com/dimitri-sky/flutterapp/blob/main/assets/images/logo.png)
 
 ## Getting Started
 
