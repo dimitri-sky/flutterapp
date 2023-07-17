@@ -1,4 +1,4 @@
-# flutterapp
+# Flutter App for Self Improvement
 
 ![alt text](https://github.com/dimitri-sky/flutterapp/blob/main/assets/images/logo.png)
 
